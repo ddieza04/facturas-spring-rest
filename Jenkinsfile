@@ -6,7 +6,7 @@ pipeline{
 
         stage("Descargar codigo de la aplicacion"){
             steps{
-                git "https://github.com/ddieza04/app-facturas-spring.git"
+                git "https://github.com/ddieza04/facturas-spring-rest.git"
             }
         }
         stage("Compilar y ejecutar el proyecto"){
