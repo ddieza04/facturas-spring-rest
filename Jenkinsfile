@@ -24,9 +24,9 @@ pipeline{
             steps{
                 script {
                     if(isUnix()){
-                        sh "docker build -t app-java ."
+                        sh "docker build -t ddiez/app-java ."
                     }else{
-                        bat "docker build -t app-java ."
+                        bat "docker build -t ddiez/app-java ."
                     }
                 }
             }
@@ -35,9 +35,9 @@ pipeline{
             steps{
                 script {
                     if(isUnix()){
-                        sh "docker run -d --name app-java -p 4200:8080 ddiez/app-java"
+                        sh "docker run -d --name app-java -p 18080:8080 ddiez/app-java"
                     }else{
-                        bat "docker run -d --name app-java -p 4200:8080 ddiez/app-java"
+                        bat "docker run -d --name app-java -p 18080:8080 ddiez/app-java"
                     }
                 }
             }
